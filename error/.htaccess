@@ -1,0 +1,2 @@
+ErrorDocument 404 /aml6963/235/error/error.html
+DirectoryIndex noterror.html 
