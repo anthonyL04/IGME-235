@@ -1,0 +1,107 @@
+/* TODO modify style so all content stays centered? */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+/* header Styles */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* jpegs but in this case its only for the selfie image */
+.jpgs {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 200px;
+}
+
+/* container for bio and anchorlinks */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: lightgray;
+}
+
+/* header and list styles (for bio) */
+h2 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+ul li strong {
+    color: #0077cc;
+}
+
+/* footer Styles */
+footer {
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* blockquote style */
+blockquote.quotebox {
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-left: 5px solid #0077cc;
+    margin: 20px;
+    max-width: 600px;
+    font-style: italic;
+}
+
+blockquote.quotebox a {
+    color: #0077cc;
+}
+
+blockquote.quotebox a:hover {
+    text-decoration: underline;
+}
