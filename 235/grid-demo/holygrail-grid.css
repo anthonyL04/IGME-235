@@ -1,7 +1,6 @@
-aside,
-article {
-    padding: .5rem;
-}
+/**************************************
+General Formatting (Leave This Alone!)
+**************************************/
 
 * {
     box-sizing: border-box;
@@ -38,48 +37,42 @@ nav, aside {
     border: 1px dotted black; 
 }
 
-/* Grid formatting */
-
-#wrapper {
+/*****************
+Grid Formatting  
+*****************/
+ #wrapper{
     display: grid;
     height: 100vh;
-    grid-template-areas: 
-        "header" 
-        "sidenav" 
-        "article" 
-        "sidebar" 
-        "footer";
     grid-template-rows: 1fr 2fr 10fr 2fr 1fr;
+    grid-template-areas: "header" "navbar" "content" "sidebar" "footer";
+} 
+
+@media screen and (min-width: 760px){
+#wrapper{
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-areas: "header header header" 
+                          "navbar content sidebar" 
+                          "footer footer footer";
+}
 }
 
-@media only screen and (mid-width: 760px){
-    #wrapper {
-        grid-template-areas: 
-            "header  header  header"
-            "sidenav article sidebar"
-            "footer  footer  footer";
-        grid-template-rows: 1fr 10fr 1fr;
-        grid-template-columns: 20% auto 20% auto;
-    }
-}
-
-header {
+header{
     grid-area: header;
 }
 
-nav {
-    grid-area: sidenav;
+nav{
+    grid-area: navbar;
 }
 
-article {
-    grid-area: article;
+article{
+    grid-area: content;
 }
 
 aside{
     grid-area: sidebar;
 }
 
-footer {
+footer{
     grid-area: footer;
 }
-
