@@ -1,0 +1,247 @@
+/**************************************
+General Reset and Box Sizing
+**************************************/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+
+html, body {
+    margin: 0;
+}
+
+/**************************************
+General Body Styling
+**************************************/
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-image: url('../media/crumpled-paper-background.jpg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    filter: grayscale(80%);
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(205, 134, 83, 0.3);
+    z-index: -1;
+}
+
+/**************************************
+Typography and Font Styles
+**************************************/
+.bonheur-royale-regular {
+    font-family: "Bonheur Royale", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header .bottom-box h1 {
+    font-family: "Bonheur Royale", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6.5rem;
+    color: #000000;
+}
+
+.article-title {
+    font-family: "Bonheur Royale", serif;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #000000;
+}
+
+blockquote {
+    font-family: "Bonheur Royale", serif;
+    background-color: rgba(14, 14, 14, 0.3);
+    padding: 15px;
+    margin: 20px 0;
+    font-style: italic;
+    font-size: 2.1rem;
+    line-height: 1.6;
+}
+
+.column-left h1, .column-left h2, .column-right h2 {
+    letter-spacing: 4px;
+}
+
+.column-left h1 {
+    font-style: italic;
+    font-size: 5.5rem;
+    line-height: 1;
+}
+
+.column-left h2, .column-right h2 {
+    line-height: 1.4;
+}
+
+/**************************************
+Wrapper and Grid Layout
+**************************************/
+#wrapper {
+    display: grid;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "content"
+        "footer";
+}
+
+@media screen and (min-width: 760px) {
+    #wrapper {
+        grid-template-columns: 5% 1fr 5%;
+        grid-template-areas: 
+            "header header header" 
+            "navbar content sidebar" 
+            "footer footer footer";
+    }
+}
+
+/**************************************
+Header Styling
+**************************************/
+header {
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(134, 175, 73, 0.5);
+    z-index: 1;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../media/coffee-stain.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    z-index: 3;
+}
+
+header div {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    position: relative;
+    z-index: -1;
+}
+
+header .top-box {
+    background-color: rgba(125, 125, 125, 0.5);
+    height: 100px;
+}
+
+header .middle-box {
+    background-color: rgba(220, 220, 220, 0.8);
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+    z-index: 2;
+}
+
+header .middle-box h3 {
+    margin: 0;
+    color: #000;
+    z-index: 3;
+}
+
+header .bottom-box {
+    font-size: 4.5rem;
+    background-color: rgba(125, 125, 125, 0.5);
+    height: 150px;
+}
+
+header h1, header h3 {
+    margin: 0;
+}
+
+/**************************************
+Navigation Styling
+**************************************/
+nav {
+    grid-area: navbar;
+    background-color: null;
+    border: 0px dotted black;
+    padding: .5rem;
+}
+
+/**************************************
+Content Area Styling
+**************************************/
+article {
+    grid-area: content;
+}
+
+.article-image {
+    width: 100%;
+    height: 30%;
+    filter: grayscale(100%);
+}
+
+.content-columns {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(244, 244, 244, 0);
+}
+
+.column-left, .column-right {
+    background-color: rgba(244, 244, 244, 0);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.column-left h2, .column-right h2 {
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.column-left p, .column-right p {
+    color: #555;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+/**************************************
+Footer Styling
+**************************************/
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(125, 125, 125, 0.5);
+    padding: 20px;
+}
