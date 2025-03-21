@@ -20,14 +20,14 @@ General Body Styling
 body {
     margin: 0;
     padding: 0;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     background-image: url('../media/crumpled-paper-background.jpg'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 100%;
+    height: 2000;
     filter: grayscale(80%);
 }
 
@@ -67,13 +67,17 @@ header .bottom-box h1 {
 }
 
 blockquote {
+    width: 100%;
+    height: 8%;
     font-family: "Bonheur Royale", serif;
     background-color: rgba(14, 14, 14, 0.3);
-    padding: 15px;
-    margin: 20px 0;
+    padding: 0px 60px;
+    margin: 25px 0;
     font-style: italic;
-    font-size: 2.1rem;
-    line-height: 1.6;
+    font-size: 2.2rem;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: bold;
 }
 
 .column-left h1, .column-left h2, .column-right h2 {
@@ -82,12 +86,14 @@ blockquote {
 
 .column-left h1 {
     font-style: italic;
-    font-size: 5.5rem;
+    font-size: 4.8rem;
     line-height: 1;
+    padding: 10px 0px;
+    margin: 0px 0px;
 }
 
 .column-left h2, .column-right h2 {
-    line-height: 1.4;
+    line-height: 1;
 }
 
 /**************************************
@@ -96,7 +102,7 @@ Wrapper and Grid Layout
 #wrapper {
     display: grid;
     height: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
@@ -156,12 +162,12 @@ header div {
 
 header .top-box {
     background-color: rgba(125, 125, 125, 0.5);
-    height: 100px;
+    height: 130px;
 }
 
 header .middle-box {
     background-color: rgba(220, 220, 220, 0.8);
-    height: 55px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,16 +177,22 @@ header .middle-box {
 }
 
 header .middle-box h3 {
+    font-size: 2rem;
     margin: 0;
     color: #000;
     z-index: 3;
 }
 
 header .bottom-box {
-    font-size: 4.5rem;
     background-color: rgba(125, 125, 125, 0.5);
-    height: 150px;
+    height: 190px;
+    padding: .5rem;
 }
+
+header .bottom-box h1 {
+    font-size: 8.5rem;
+}
+
 
 header h1, header h3 {
     margin: 0;
@@ -205,7 +217,7 @@ article {
 
 .article-image {
     width: 100%;
-    height: 30%;
+    height: 37%;
     filter: grayscale(100%);
 }
 
@@ -230,8 +242,8 @@ article {
 
 .column-left p, .column-right p {
     color: #555;
-    font-size: 1.6rem;
-    line-height: 1.6;
+    font-size: 1.4rem;
+    line-height: 1.2;
 }
 
 /**************************************
