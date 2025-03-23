@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Web Apps-4-HW</title>
+	<style>
+		body { border: 1px solid gray; }
+	</style>
+</head>
+<body>
+<h1>My Favorites</h1>
+
+<h2>My Favorite Colors</h2>
+<ol id="colorsList"></ol>
+
+<h2>My Favorite Foods</h2>
+<ol id="foodsList"></ol>
+
+<h2>My Favorite Links</h2>
+<ol id="linksList"></ol>
+
+<script>
+"use strict";
+
+// 1) Declare an array of favorite colors.
+let colors = ["orange", "white", "blue", "black", "pink"];
+
+// 2) Declare an array of favorite foods (you can change these items to your favorites).
+let foods = ["pizza", "wings", "ice cream", "pasta", "tacos"];
+
+// 3) Declare an object that stores favorite links, where keys are names and values are URLs.
+let links = {
+	"RIT": "http://www.rit.edu",
+	"RWAG": "https://www.facebook.com/RWAGclub",
+	"New Media Club": "http://newmediaclub.cias.rit.edu"
+};
+
+// 4) Create a function to generate list items and append them to a list element
+// This function takes two parameters: a reference to the <ol> element and the array to populate it.
+function createList(listElement, array = ["puppydogs", "butterflies", "lollipops"]) 
+{
+	// Loop through the array and generate list items
+	for (let item of array)
+	{
+		let listItem = document.createElement("li");
+		listItem.textContent = item; 
+		listElement.appendChild(listItem); 
+	}
+}
+
+// 5) Call the function to generate the colors list
+let colorsList = document.getElementById("colorsList");
+createList(colorsList, colors); 
+
+// 6) Call the function to generate the foods list
+let foodsList = document.getElementById("foodsList");
+createList(foodsList, foods); 
+
+// 7) Loop through the links object to generate list items with links, and append them to the links list.
+let linksList = document.getElementById("linksList");
+for (let key in links) 
+{
+	if (links.hasOwnProperty(key)) 
+	{
+		let listItem = document.createElement("li");
+		let link = document.createElement("a");
+		link.textContent = key;
+		link.href = links[key];
+		link.target = "_blank";
+		listItem.appendChild(link);
+		linksList.appendChild(listItem);
+	}
+}
+
+</script>
+</body>
+</html>

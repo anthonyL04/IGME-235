@@ -221,6 +221,21 @@ article {
     background-color: rgba(244, 244, 244, 0);
 }
 
+/* stacks columns vertically as per the rwd. results arent very desireable, but does stack vertically */
+@media screen and (max-width: 760px) {
+    .content-columns {
+        grid-template-columns: 1fr; 
+    }
+
+    .column-left {
+        order: 1;
+    }
+
+    .column-right {
+        order: 2; 
+    }
+}
+
 .column-left, .column-right {
     padding: 15px;
     border-radius: 8px;
