@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Phrases</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="content-container">
+        <h1>Risk of Rain 2 Items</h1>
+
+        <!-- image and quote -->
+        <div class="quote-content">
+            <img id="quoteImage" src="" alt="Random Image" class="quote-image" />
+            <div class="quote-display" id="quoteDisplay"></div>
+        </div>
+
+        <!-- display random image and quote when button is clicked -->
+        <button class="quote-button" onclick="displayQuote()">Open A Chest</button>
+        <div class="footer">
+            <p>Anthony L.</p>
+        </div>
+    </div>
+
+    <script>
+        // array of objects containing a quote and image
+        const items = [
+            {
+                quote: "...and his music was electric.",
+                image: "media/Ukulele.webp" 
+            },
+            {
+                quote: "Er, hold that thought. It spontaneously combusted while I was writing this. I'll get you a new one in case it burns during transit, this happens a lot!",
+                image: "media/Ignition_Tank.webp" 
+            },
+            {
+                quote: "Do not be mistaken – his influence is still dark. Despite how beautiful your pearl is… it is not from a place of kindness. It cannot be.",
+                image: "media/Irradiant_Pearl.webp" 
+            },
+            {
+                quote: "A small leaf, peeking out from a pile of ash. He gently plucked the clover out of the ground – somehow, it survived hours of orbital bombardments.",
+                image: "media/57_Leaf_Clover.webp" 
+            },
+            {
+                quote: "Life finds a way. Even in the depths of creation, there's bound to be something crawling along the sand, just hoping to make it through the day.",
+                image: "media/Pluripotent_Larva.webp"
+            }
+        ];
+
+        // displays a random item containing an image and quote
+        function displayQuoteAndImage() 
+        {
+            const randomIndex = Math.floor(Math.random() * items.length);
+            const selectedItem = items[randomIndex];
+
+            // set quote text and image to randomly chosen item
+            document.getElementById('quoteDisplay').innerText = selectedItem.quote;
+            document.getElementById('quoteImage').src = selectedItem.image;
+        }
+
+        // display random quote when the page reloads
+        window.onload = displayQuote;
+    </script>
+
+</body>
+
+</html>

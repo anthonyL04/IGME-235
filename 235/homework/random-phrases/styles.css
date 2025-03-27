@@ -1,0 +1,105 @@
+/* import bombardier font (font used in Risk of Rain 2) */
+@font-face {
+    font-family: 'Bombadier Regular';
+    src: url('media/Bombardier-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* general body styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Bombadier Regular', sans-serif; 
+}
+
+/* background image and page styling */
+body {
+    background-image: url('media/background.jpg');
+    background-size: cover; /* makes it so the background image covers the entire page */
+    background-position: center;
+    background-attachment: fixed; /* image is fixed even when scrolling/zooming in and out */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* object that contains title and random phrases */
+.content-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: 'Bombadier Regular', sans-serif;
+}
+
+.quote-content {
+    margin-bottom: 20px;
+}
+
+/* styling for images */
+.quote-image {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* attempt at recreating ROR2 button */
+.quote-button {
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Bombadier Regular', sans-serif; 
+}
+
+/* slightly darker color on hover */
+.quote-button:hover {
+    background-color: #3b8a3f;
+}
+
+/* even darker color on active */
+.quote-button:active {
+    background-color: #1d421e;
+}
+
+.quote-display {
+    font-size: 1.5em;
+    font-weight: 400;
+    max-width: 80%;
+    word-wrap: break-word;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Bombadier Regular', sans-serif;
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 1em;
+    color: #fff;
+    font-family: 'Bombadier Regular', sans-serif;
+}
